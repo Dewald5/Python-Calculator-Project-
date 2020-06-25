@@ -10,7 +10,7 @@ import sys
 Reapeat = False
 i = 0
 a = 0
-Alpha ='abcdefghijklmnopqrstuvwxyz'
+Alpha ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 Repeat = True
 total = 0
 Nr1 = ""
@@ -64,6 +64,8 @@ while Repeat == True:
         totals()
         repeater()
         Add = "n"
+    elif Add.lower() == "n":
+        print("====================================")
     else:    
         print("Enter avalid character")
     
@@ -72,6 +74,9 @@ while Repeat == True:
         totals()
         repeater()
         Sub = "n"
+    
+    elif Sub.lower() == "n":
+        print("====================================")
     else:    
         print("Enter avalid character")
     
@@ -80,6 +85,8 @@ while Repeat == True:
         totals()
         repeater()
         Div = "n"
+    elif Div.lower() == "n":
+        print("====================================")
     else:    
         print("Enter avalid character")
     
@@ -88,5 +95,7 @@ while Repeat == True:
         totals()
         repeater()
         Mp = "n"
+    elif Mp.lower() == "n":
+        print("====================================")
     else:    
         print("Enter avalid character")
