@@ -16,7 +16,7 @@ total = 0
 Nr1 = ""
 enter = ""
 def totals():
-     Nr1 = input("Enter a number()""\n")
+     Nr1 = input("Enter a number""\n")
      enter = input("Enter the 2nd number""\n")
      for a in range(len(str(Nr1))):
          for i in range(len(Alpha)):  
@@ -30,19 +30,19 @@ def totals():
                  sys.exit()  
         
      if Add.lower() == "y":
-         total = float(Nr1) + float(enter)
+         total = float(Nr1.replace(',', '.')) + float(enter.replace(',', '.'))
          return print("total: " + str(total)) 
          
      if Sub.lower() == "y":    
-          total = float(Nr1) - float(enter)
+          total = float(Nr1.replace(',', '.')) - float(enter.replace(',', '.'))
           return print("total: " + str(total))
         
      if Div.lower() == "y":
-         total = float(Nr1) / float(enter)
+         total = float(Nr1.replace(',', '.')) / float(enter.replace(',', '.'))
          return print("total: " + str(total))
      
      if Mp.lower() == "y":     
-          total = float(Nr1) * float(enter)
+          total = float(Nr1.replace(',', '.')) * float(enter.replace(',', '.'))
           return print("total: " + str(total))        
         
 def repeater():
@@ -53,7 +53,10 @@ def repeater():
             print("Thanks for using this calculator")
             Repeat == False
             sys.exit()
-     
+    else: 
+        print("Enter a valid character")
+        repeater()
+
 while Repeat == True:
     
     Add = input("Do you want to Add a Number(Y/N)""\n")
@@ -61,21 +64,29 @@ while Repeat == True:
         totals()
         repeater()
         Add = "n"
-        
+    else:    
+        print("Enter avalid character")
+    
     Sub = input("Do you want to Subtract a Number(Y/N)""\n")
     if Sub.lower() == "y": 
         totals()
         repeater()
         Sub = "n"
+    else:    
+        print("Enter avalid character")
     
     Div = input("Do you want to Divide a Number(Y/N)""\n")
     if Div.lower() == "y": 
         totals()
         repeater()
         Div = "n"
-        
+    else:    
+        print("Enter avalid character")
+    
     Mp = input("Do you want to Multiply a Number(Y/N)""\n")
     if Mp.lower() == "y": 
         totals()
         repeater()
-        Mp = "n"    
+        Mp = "n"
+    else:    
+        print("Enter avalid character")
