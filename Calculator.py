@@ -26,24 +26,25 @@ def totals():
      for a in range(len(str(enter))):
          for i in range(len(Alpha)):  
              if str(enter[a]) == Alpha[i]:
-                 print("please enter a valid character")
-                 sys.exit() 
+                 print("please enter a valid character for the 2nd number")
+                 sys.exit()  
+        
      if Add.lower() == "y":
-         total = int(Nr1) + int(enter)
+         total = float(Nr1) + float(enter)
          return print("total: " + str(total)) 
          
-     if Div.lower() == "y":
-         total = int(Nr1) / int(enter)
-         return print("total: " + str(total))
-    
-     if Mp.lower() == "y":     
-          total = int(Nr1) * int(enter)
-          return print("total: " + str(total))
-   
      if Sub.lower() == "y":    
-          total = int(Nr1) - int(enter)
+          total = float(Nr1) - float(enter)
           return print("total: " + str(total))
-      
+        
+     if Div.lower() == "y":
+         total = float(Nr1) / float(enter)
+         return print("total: " + str(total))
+     
+     if Mp.lower() == "y":     
+          total = float(Nr1) * float(enter)
+          return print("total: " + str(total))        
+        
 def repeater():
     Repeatstr = input("Do you want to continue using the calculator(Y/N)""\n") 
     if Repeatstr.lower() == "y":
@@ -61,6 +62,12 @@ while Repeat == True:
         repeater()
         Add = "n"
         
+    Sub = input("Do you want to Subtract a Number(Y/N)""\n")
+    if Sub.lower() == "y": 
+        totals()
+        repeater()
+        Sub = "n"
+    
     Div = input("Do you want to Divide a Number(Y/N)""\n")
     if Div.lower() == "y": 
         totals()
@@ -71,11 +78,4 @@ while Repeat == True:
     if Mp.lower() == "y": 
         totals()
         repeater()
-        Mp = "n"
-        
-    Sub = input("Do you want to Subtract a Number(Y/N)""\n")
-    if Sub.lower() == "y": 
-        totals()
-        repeater()
-        Sub = "n"
-    
+        Mp = "n"    
