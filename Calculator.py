@@ -67,7 +67,7 @@ while Repeat == True:
     elif Add.lower() == "n":
         print("====================================")
     else:    
-        print("Enter avalid character")
+        print("Enter a valid character")
     
     Sub = input("Do you want to Subtract a Number(Y/N)""\n")
     if Sub.lower() == "y": 
@@ -78,7 +78,7 @@ while Repeat == True:
     elif Sub.lower() == "n":
         print("====================================")
     else:    
-        print("Enter avalid character")
+        print("Enter a valid character")
     
     Div = input("Do you want to Divide a Number(Y/N)""\n")
     if Div.lower() == "y": 
@@ -88,7 +88,7 @@ while Repeat == True:
     elif Div.lower() == "n":
         print("====================================")
     else:    
-        print("Enter avalid character")
+        print("Enter a valid character")
     
     Mp = input("Do you want to Multiply a Number(Y/N)""\n")
     if Mp.lower() == "y": 
@@ -98,4 +98,4 @@ while Repeat == True:
     elif Mp.lower() == "n":
         print("====================================")
     else:    
-        print("Enter avalid character")
+        print("Enter a valid character")
